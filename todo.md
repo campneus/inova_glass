@@ -31,5 +31,5 @@
 - [x] Inicializar repositório Git
 
 ## Entrega
-- [ ] Verificar todos os requisitos implementados
-- [ ] Entregar site completo
+- [x] Verificar todos os requisitos implementados
+- [x] Entregar site completo

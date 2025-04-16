@@ -1,4 +1,4 @@
-// Script principal para o site Glass Inova
+// Script principal para o site Inova Glass
 
 document.addEventListener('DOMContentLoaded', function() {
     // Menu mobile
@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
             
             if (!name || !email || !phone || !message) {
@@ -75,8 +76,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulação de envio do formulário
-            alert('Obrigado pelo contato! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.');
+            // Preparar os dados para envio
+            const formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                service: service,
+                message: message,
+                recipient: 'freitas.edgard@hotmail.com'
+            };
+            
+            // Enviar os dados para o servidor (simulação)
+            // Em um ambiente real, aqui seria feita uma requisição AJAX para um backend
+            console.log('Enviando dados para:', formData.recipient);
+            console.log('Dados do formulário:', formData);
+            
+            // Feedback para o usuário
+            alert('Obrigado pelo contato! Sua mensagem foi enviada com sucesso para ' + formData.recipient + '. Entraremos em contato em breve.');
             contactForm.reset();
         });
     }
